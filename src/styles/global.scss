@@ -1,0 +1,41 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --white: rgb(255, 255, 255);
+    
+    --gray-50: #F7F8FA;
+    --gray-100: #E6E8EB;
+    --gray-200: #AFB2B1;
+    --gray-500: #808080;
+    --gray-800: #494D4B;
+
+    --blue-100: rgb(0, 123, 255);
+    
+    --green-500: #04D361;
+    
+    --purple-300: #9F75FF;
+    --purple-400: #9164FA; 
+    --purple-500: #8257E5;
+    --purple-800: #6F48C9;
+}
+
+body{
+    background: var(--gray-100)
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgb(239, 239, 239);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(60, 60, 60);
+}
