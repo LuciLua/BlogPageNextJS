@@ -18,6 +18,77 @@ export default function Home( { allPosts }: HomeProps ) {
       <Head>
         <title>Blog | Home</title>
       </Head>
+      <div className={styles.listOfTables}>
+
+      <div className={styles.table}>
+        <div className={styles.tableGG}>
+          <div className={styles.tableHead}>
+            <div className={styles.tableBall}></div>
+            <div className={styles.tableInfoPeople}>
+              <h1>Donald Mec</h1>
+              <h2>Software Engeneer</h2>
+            </div>
+          </div>
+          <div className={styles.tableG}>
+            <div className={styles.tableContent}>
+              <p>Informação Informação Lorem</p>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div className={styles.table}>
+        <div className={styles.tableGG}>
+          <div className={styles.tableHead}>
+            <div className={styles.tableBall}></div>
+            <div className={styles.tableInfoPeople}>
+              <h1>Donald Mec</h1>
+              <h2>Software Engeneer</h2>
+            </div>
+          </div>
+          <div className={styles.tableG}>
+            <div className={styles.tableContent}>
+              <p>Informação Informação Lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos voluptas illum voluptates aperiam deleniti provident perferendis possimus optio temporibus, deserunt ea quae corrupti molestias </p>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div className={styles.table}>
+        <div className={styles.tableGG}>
+          <div className={styles.tableHead}>
+            <div className={styles.tableBall}></div>
+            <div className={styles.tableInfoPeople}>
+              <h1>Donald Mec</h1>
+              <h2>Software Engeneer</h2>
+            </div>
+          </div>
+          <div className={styles.tableG}>
+            <div className={styles.tableContent}>
+              <p>Informação Informação Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam eius porro itaque nisi? Commodi praesentium quae</p>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div className={styles.table}>
+        <div className={styles.tableGG}>
+          <div className={styles.tableHead}>
+            <div className={styles.tableBall}></div>
+            <div className={styles.tableInfoPeople}>
+              <h1>Donald Mec</h1>
+              <h2>Software Engeneer</h2>
+            </div>
+          </div>
+          <div className={styles.tableG}>
+            <div className={styles.tableContent}>
+              <p>Informação Informação Lorem</p>
+            </div>
+          </div>
+        </div>
+        </div>
+
+      </div>
     </div>
   )
 }

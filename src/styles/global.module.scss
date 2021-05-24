@@ -1,3 +1,105 @@
 .main{
-    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .listOfTables{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        width: 100%;
+        height: fit-content;
+        
+        background-color: #121212;
+.table{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    height: 300px;
+    width: 320px;
+
+    margin: 20px;
+
+        .tableGG{
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            max-height: 300px;
+            height: fit-content;
+            width: 320px;
+
+            margin: 20px;
+
+            background-color: #1a1a1a;
+            box-shadow: 0 0 12px black;
+            border-radius: 6px;
+
+            overflow: hidden;
+
+            .tableHead{
+                height: 75px;
+                width: 90%;
+
+                border-bottom: #353535 1px solid;
+
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                .tableBall{
+                    background-color: rgb(0, 81, 255);
+                    border-radius: 100%;
+                    width: 50px;
+                    height: 50px;
+                    margin: 10px 30px 10px 10px;
+                }
+
+                .tableInfoPeople{
+                    line-height: 1.5;
+
+                    h1{
+                        color: rgb(201, 201, 201);
+                        font-family: Arial;
+                        font-weight: 600;
+                        font-size: 23px;
+                    }
+
+                    h2{
+                        font-family: Arial;
+                        font-size: 13px;
+                        color: #3f3f3f;
+                    }
+                }
+            }
+
+            .tableG{
+                width: 85%;
+                height: 100%;
+
+                margin: 10px 0 20px 0;
+
+                .tableContent{
+                    padding: 20px;
+
+                    p{
+                        color: #525252;
+                        font-family: Arial;
+                        line-height: 1.5;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    }
 }
