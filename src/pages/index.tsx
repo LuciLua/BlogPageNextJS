@@ -31,7 +31,9 @@ export default function Home( { allPosts }: HomeProps ) {
           </div>
           <div className={styles.tableG}>
             <div className={styles.tableContent}>
-              <p>Informação Informação Lorem</p>
+              <button>Information One</button>
+              <button>Information Two</button>
+              <button>Information Three</button>
             </div>
           </div>
         </div>
@@ -48,7 +50,8 @@ export default function Home( { allPosts }: HomeProps ) {
           </div>
           <div className={styles.tableG}>
             <div className={styles.tableContent}>
-              <p>Informação Informação Lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos voluptas illum voluptates aperiam deleniti provident perferendis possimus optio temporibus, deserunt ea quae corrupti molestias </p>
+              <button>Information One</button>
+              <button>Information Two</button>
             </div>
           </div>
         </div>
@@ -65,7 +68,7 @@ export default function Home( { allPosts }: HomeProps ) {
           </div>
           <div className={styles.tableG}>
             <div className={styles.tableContent}>
-              <p>Informação Informação Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam eius porro itaque nisi? Commodi praesentium quae</p>
+            <button>Information One</button>
             </div>
           </div>
         </div>
@@ -82,7 +85,8 @@ export default function Home( { allPosts }: HomeProps ) {
           </div>
           <div className={styles.tableG}>
             <div className={styles.tableContent}>
-              <p>Informação Informação Lorem</p>
+            <button>Information One</button>
+            <button>Information Two</button>
             </div>
           </div>
         </div>
