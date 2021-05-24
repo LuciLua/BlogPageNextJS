@@ -1,6 +1,8 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import styles from './posts.module.scss'
 
+import Head from 'next/head'
+
 type Post = {
     title: string;
 }
@@ -12,6 +14,9 @@ type PostProps = {
 export default function Post( {post}: PostProps){
     return(
         <div className={styles.pagePosts}>
+            <Head>
+                <title>Blog | Posts</title>
+            </Head>
 
         <div className={styles.writePost}>
             <div className={styles.icosWritePost}>
@@ -26,10 +31,13 @@ export default function Post( {post}: PostProps){
             </div>
             <textarea>
             </textarea>
+            <div className={styles.btns}> 
+                <button>Enviar</button>
+                <button>Salvar Rascunho</button>
+            </div>
         </div>
 
         <div className={styles.postsEnv}>
-            <h1>Posts</h1>
             <br />
             <div className={styles.posts}>
 

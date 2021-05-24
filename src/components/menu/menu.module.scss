@@ -8,7 +8,7 @@
     width: 100%;
     height: 40px;
 
-    background: var(--purple-800);
+    background: rgb(45, 45, 45);
 
     ul{
         list-style: none;
@@ -30,15 +30,15 @@
             a{
                 text-decoration: none;
 
-                color: var(--purple-300);
+                color: rgb(186, 186, 186);
                 font-family: Arial;
-                font-size: 20px;
+                font-size: 18px;
 
                 cursor: pointer;
             }
 
             a:hover{
-                color: var(--purple-400);
+                color: var(--white);
             }
         }
     

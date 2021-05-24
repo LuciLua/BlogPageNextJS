@@ -1,6 +1,7 @@
 import styles from '../styles/global.module.scss'
 
-import Link  from 'next/link';
+// native imports
+import Head from 'next/head'
 
 type Post = {
   id: string;
@@ -14,7 +15,9 @@ type HomeProps = {
 export default function Home( { allPosts }: HomeProps ) {
   return (
     <div className={styles.main}>
-
+      <Head>
+        <title>Blog | Home</title>
+      </Head>
     </div>
   )
 }
