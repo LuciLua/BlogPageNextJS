@@ -12,11 +12,14 @@ function MyApp({ Component, pageProps }) {
 
   return(
 
-  <> 
-    <main>
+  <> <div className={styles.spc}>
+  </div>
       <Menu />
+    <main>
+      <div className={styles.bodyScroll}>
       <Front />
       <Component {...pageProps} />
+      </div>
     </main>
   </>
   )

@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar{
+    width: 0px;
+}
 
 :root{
     --white: rgb(255, 255, 255);
@@ -25,17 +28,5 @@
 }
 
 body{
-    background: var(--gray-100)
-}
-
-::-webkit-scrollbar{
-    width: 5px;
-}
-
-::-webkit-scrollbar-track{
-    background-color: rgb(239, 239, 239);
-}
-
-::-webkit-scrollbar-thumb{
-    background-color: rgb(60, 60, 60);
+    background: var(--gray-100);
 }

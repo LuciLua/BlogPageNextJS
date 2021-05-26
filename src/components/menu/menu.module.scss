@@ -1,16 +1,25 @@
 .menu{
-    position: fixed;
+    position:fixed;
+
+    top: 0;
+
     z-index: 10;
 
     display: flex;
     align-items: center;
 
     width: 100%;
-    height: 40px;
+    height: 50px;
 
-    background: rgb(45, 45, 45);
+    margin-bottom: 50px;
 
+
+    background: rgb(62, 62, 62);
+    border-bottom: 1px solid rgb(208, 208, 208);
+    
     ul{
+
+        position: relative;
         list-style: none;
 
         display: flex;
@@ -26,19 +35,23 @@
 
         li{
             margin: 0 10px 0 10px;
+            position: relative;
             
             a{
                 text-decoration: none;
 
-                color: rgb(186, 186, 186);
-                font-family: Arial;
+                color: rgb(220, 220, 220);
+                font-family:'Segoe UI';
+                font-weight: 500;
                 font-size: 18px;
 
                 cursor: pointer;
+                position: relative;
+
             }
 
             a:hover{
-                color: var(--white);
+                color: rgb(159, 159, 159);
             }
         }
     

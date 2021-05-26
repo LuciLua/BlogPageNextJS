@@ -1,9 +1,51 @@
+.spc{
+    position: relative;
+    color: aqua;
+    height: 50px;
+    width: 100%;
+    top: 0;
+}
+
+.bodyScroll{
+    height: 100vh;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar{
+
+        position: fixed;
+
+        width: 5px;
+        z-index: 1000;
+        }
+    
+        &::-webkit-scrollbar-track{
+            background-color: rgb(172, 172, 174);
+        }
+    
+        &::-webkit-scrollbar-thumb{
+            background-color: rgb(58, 58, 58);
+            border-radius: 10px;
+
+        }
+
+        &::-webkit-scrollbar-button{
+            display: none;
+        }
+}
+
+
+
 .main{
     width: 100%;
     display: flex;
     justify-content: center;
 
+
     .listOfTables{
+
+    border-top: 1px solid #545454;
+    box-shadow: 0 0px 12px rgb(194, 194, 194);
+
         position: relative;
         display: flex;
         justify-content: center;
@@ -14,7 +56,7 @@
         width: 100%;
         height: fit-content;
         
-        background-color: #121212;
+        background-color: #e3e3e3;
 .table{
 
     display: flex;
@@ -38,8 +80,8 @@
 
             margin: 20px;
 
-            background-color: #1a1a1a;
-            box-shadow: 0 0 12px black;
+            background-color: #ffffff;
+            box-shadow: 0 0 12px rgb(191, 191, 191);
             border-radius: 6px;
 
             overflow: hidden;
@@ -48,14 +90,14 @@
                 height: 75px;
                 width: 90%;
 
-                border-bottom: #353535 1px solid;
+                border-bottom: #dadada 1px solid;
 
                 position: relative;
                 display: flex;
                 align-items: center;
 
                 .tableBall{
-                    background-color: rgb(0, 81, 255);
+                    background-color: rgb(92, 92, 92);
                     border-radius: 100%;
                     width: 50px;
                     height: 50px;
@@ -66,16 +108,16 @@
                     line-height: 1.5;
 
                     h1{
-                        color: rgb(201, 201, 201);
-                        font-family: Arial;
-                        font-weight: 600;
+                        color: rgb(65, 65, 65);
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        font-weight: 500;
                         font-size: 23px;
                     }
 
                     h2{
                         font-family: Arial;
                         font-size: 13px;
-                        color: #3f3f3f;
+                        color: #989898;
                     }
                 }
             }
@@ -104,7 +146,7 @@
                     }
 
                     button:hover{
-                        background-color: #212121;
+                        background-color: #d5d5d5;
                     }
 
                     p{
