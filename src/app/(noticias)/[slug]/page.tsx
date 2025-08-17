@@ -1,10 +1,11 @@
 // page.tsx
 interface PageProps {
-    params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export default async function page_noticia({ params }: PageProps) {
-    const { slug } = await params;
+
+export default  async function page_noticia({ params }: PageProps) {
+  const { slug } = await params; // 👈 await no params
 
     return (
         <div>
