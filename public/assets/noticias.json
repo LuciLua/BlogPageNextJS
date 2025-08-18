@@ -1,0 +1,24 @@
+{
+  "noticias": [
+    {
+      "nome": "Como criar pequenos projetos de forma rápida",
+      "content": "Eu gosto de começar definindo quais serão as ferramentas que irei utilizar. Isso me ajuda a não me perder no meio do processo e a manter o foco. Depois dessa etapa, podemos partir para a execução prática do projeto com mais segurança."
+    },
+    {
+      "nome": "Formas de reestruturar projetos antigos",
+      "content": "Sempre gostei de rever antigos projetos, mas certamente é um desafio revisar códigos desatualizados. A chave é começar limpando as dependências, atualizando bibliotecas e criando uma base de testes. Assim, é possível dar vida nova a algo que parecia perdido."
+    },
+    {
+      "nome": "Boas práticas para organizar seu código",
+      "content": "Manter um padrão de nomenclatura e seguir convenções da linguagem facilita o entendimento do código. Comentários claros e uma estrutura de pastas bem definida ajudam no trabalho em equipe. O resultado é um projeto mais limpo e escalável."
+    },
+    {
+      "nome": "Por que aprender novas ferramentas de desenvolvimento",
+      "content": "O mercado de tecnologia evolui rapidamente, e dominar apenas uma stack pode limitar as oportunidades. Aprender novas ferramentas amplia seu repertório e ajuda a resolver problemas de forma mais criativa. Além disso, você se torna um profissional mais versátil."
+    },
+    {
+      "nome": "Dicas para manter a produtividade em projetos longos",
+      "content": "Projetos extensos exigem disciplina e organização para evitar a sobrecarga. Divida grandes tarefas em metas menores e mensuráveis, e celebre cada conquista. Pausas estratégicas e revisão constante do cronograma ajudam a manter a motivação em dia."
+    }
+  ]
+}
