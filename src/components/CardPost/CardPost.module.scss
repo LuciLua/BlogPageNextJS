@@ -29,8 +29,8 @@
   transition: transform 0.2s ease;
   cursor: pointer;
 
-  &:hover {
-    transform: translateY(-2px);
+  a{
+    text-decoration: none;
   }
 }
 
@@ -58,10 +58,6 @@
   margin: 0 0 12px;
   color: #111;
   line-height: 1.4;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 .excerpt {

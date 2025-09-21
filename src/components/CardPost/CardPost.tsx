@@ -17,30 +17,32 @@ export function CardPost() {
     <div className={styles.grid}>
       {posts.map((post, index) => (
         <article key={index} className={styles.card}>
-          {/* Imagem */}
-          <img
-            src={post.capa || "/assets/capa.png"}
-            alt={post.title || "Post"}
-            className={styles.image}
-          />
+          <a
+            href={post.slug ? `/post/${post.slug}` : "/"}>
+            {/* Imagem */}
+            <img
+              src={post.capa || "/assets/capa.png"}
+              alt={post.title || "Post"}
+              className={styles.image}
+            />
 
-          {/* Conteúdo */}
-          <div className={styles.content}>
-            <h2 className={styles.title}>
-              {post.title || "Sem título"}
-            </h2>
+            {/* Conteúdo */}
+            <div className={styles.content}>
+              <h2 className={styles.title}>
+                {post.title || "Sem título"}
+              </h2>
 
-            <p className={styles.excerpt}>
-              {post.excerpt || "Clique para ler mais..."}
-            </p>
+              <p className={styles.excerpt}>
+                {post.excerpt || "Clique para ler mais..."}
+              </p>
 
-            <a
-              href={post.slug ? `/${post.slug}` : "/"}
-              className={styles.link}
-            >
-              Ler mais →
-            </a>
-          </div>
+              <p
+                className={styles.link}
+              >
+                Ler mais →
+              </p>
+            </div>
+          </a>
         </article>
       ))}
     </div>

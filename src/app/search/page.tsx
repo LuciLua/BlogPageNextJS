@@ -33,7 +33,7 @@ export default function SearchPage() {
       {results.length > 0 ? (
         <div className={styles.results}>
           {results.map((post, i) => (
-            <a key={i} href={`/${post.slug}`} className={styles.result}>
+            <a key={i} href={`/post/${post.slug}`} className={styles.result}>
               <div className={styles.text}>
                 <h2>{post.title}</h2>
                 <p>{post.excerpt}</p>

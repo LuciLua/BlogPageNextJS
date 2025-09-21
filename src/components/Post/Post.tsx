@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "next/navigation"
 import styles from "./Post.module.scss"
+import { BsPersonSquare } from "react-icons/bs";
 
 export function Post() {
   const [posts, setPosts] = useState<any[]>([])
@@ -50,6 +51,7 @@ export function Post() {
 
       {/* Conteúdo */}
       <div className={styles.content}>
+        <p className={styles.author}><BsPersonSquare /> {post.author}</p>
         <h1 className={styles.title}>{post.title}</h1>
 
         <p className={styles.dates}>

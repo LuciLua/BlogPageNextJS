@@ -9,7 +9,7 @@ export function Menu() {
         <div className={styles.menu}>
             <div className={styles.content}>
                 <div className={styles.left}>
-                    <a href="/">Blog</a>
+                    <a href="/"><img src={'/assets/white.png'}/></a>
                     <SearchBox />
                 </div>
                 <div className={styles.right}>

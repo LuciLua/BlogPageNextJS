@@ -1,5 +1,6 @@
 .container{
     max-width: 100%;
+    padding-top: 70px;
 }
 
 .noticia {
@@ -12,8 +13,9 @@
 
 
 .backButton {
-  display: inline-block;
   margin-bottom: 20px;
+  
+  display: inline-block;
   padding: 10px 18px;
   border-radius: 12px;
   background: #111;
