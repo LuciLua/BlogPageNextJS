@@ -10,12 +10,22 @@ export function Post() {
   const params = useParams()
   const { slug } = params
 
+
+  const api_url = process.env.NEXT_PUBLIC_API_URL
+
+
   useEffect(() => {
-    fetch('/posts.json')
+    if (!api_url) {
+      console.error("API_URL não definida")
+      return
+    }
+
+    fetch(`${api_url}/api/posts`)
       .then(res => res.json())
       .then(data => setPosts(data))
       .catch(err => console.error("Erro ao carregar posts:", err))
-  }, [])
+  }, [api_url])
+
 
   const post = posts.find(p => p.slug === slug)
 

@@ -8,10 +8,18 @@ export default function SearchPage() {
   const searchParams = useSearchParams()
   const query = searchParams.get("q") || ""
   const [results, setResults] = useState<any[]>([])
+  const api_url = process.env.NEXT_PUBLIC_API_URL
 
   useEffect(() => {
+
+    if (!api_url) {
+      console.error("API_URL não definida")
+      return
+    }
+
+
     if (query) {
-      fetch("/posts.json")
+      fetch(`${api_url}/api/posts`)
         .then(res => res.json())
         .then(data => {
           const filtered = data.filter((post: any) =>
@@ -22,7 +30,7 @@ export default function SearchPage() {
         })
         .catch(err => console.error("Erro na busca:", err))
     }
-  }, [query])
+  }, [query, api_url])
 
   return (
     <div className={styles.container}>
@@ -33,7 +41,7 @@ export default function SearchPage() {
       {results.length > 0 ? (
         <div className={styles.results}>
           {results.map((post, i) => (
-            <a key={i} href={`/post/${post.slug}`} className={styles.result}>
+            <a key={i} href={`${api_url}/post/${post.slug}`} className={styles.result}>
               <div className={styles.text}>
                 <h2>{post.title}</h2>
                 <p>{post.excerpt}</p>
