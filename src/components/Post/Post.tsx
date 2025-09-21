@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from "react"
 import { useParams } from "next/navigation"
+import styles from "./Post.module.scss"
 
 export function Post() {
-  const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState<any[]>([])
   const params = useParams()
   const { slug } = params
 
@@ -19,7 +20,7 @@ export function Post() {
 
   if (!post) {
     return (
-      <p style={{ textAlign: "center", marginTop: "50px", color: "#888" }}>
+      <p className={styles.loading}>
         Carregando post...
       </p>
     )
@@ -39,63 +40,27 @@ export function Post() {
   })
 
   return (
-    <article
-      style={{
-        maxWidth: "800px",
-        // margin: "40px auto",
-        background: "#fff",
-        borderRadius: "16px",
-        boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
-        overflow: "hidden",
-      }}
-    >
+    <article className={styles.post}>
       {/* Capa */}
       <img
         src={post.capa || "/assets/capa.png"}
         alt={post.title || "Post"}
-        style={{
-          width: "100%",
-          height: "250px",
-          objectFit: "cover",
-        }}
+        className={styles.cover}
       />
 
       {/* Conteúdo */}
-      <div style={{ padding: "30px 40px" }}>
-        {/* Título */}
-        <h1
-          style={{
-            marginTop: 0,
-            marginBottom: "10px",
-            fontSize: "32px",
-            lineHeight: "1.2",
-            color: "#111",
-          }}
-        >
-          {post.title}
-        </h1>
+      <div className={styles.content}>
+        <h1 className={styles.title}>{post.title}</h1>
 
-        {/* Datas */}
-        <p
-          style={{
-            fontSize: "14px",
-            color: "#666",
-            marginBottom: "20px",
-          }}
-        >
+        <p className={styles.dates}>
           📅 Publicado em <strong>{createdDate}</strong> <br />
           🔄 Atualizado em <strong>{updatedDate}</strong>
         </p>
 
-        <hr style={{ border: "none", borderTop: "1px solid #eee", margin: "20px 0" }} />
+        <hr className={styles.hr} />
 
-        {/* Conteúdo HTML */}
         <div
-          style={{
-            lineHeight: "1.8",
-            fontSize: "17px",
-            color: "#333",
-          }}
+          className={styles.body}
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </div>
