@@ -5,7 +5,8 @@ export function Menu() {
                 <div style={{ gap: '20px', display: 'flex' }}>
                     <a href="/" style={{ textDecoration: 'none' }}>Logo</a>
                 </div>
-                <div>
+                <div style={{gap: "10px", display: 'flex'}}>
+                    <a href="https://www.lucilua.com.br/" style={{ textDecoration: 'none' }}>Portfolio</a>
                     <a href="/" style={{ textDecoration: 'none' }}>Homepage</a>
                 </div>
             </div>
