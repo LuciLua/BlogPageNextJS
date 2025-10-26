@@ -15,7 +15,6 @@ export function Menu() {
                 <div className={styles.right}>
                     <a href="/">Homepage</a>
                     <a href="https://www.lucilua.com.br/">Portfolio</a>
-                    <a href="/">Categorias</a>
                 </div>
             </div>
         </div>

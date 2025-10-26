@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 import { BsSearch } from "react-icons/bs"
-import styles from './SearchBox.module.scss'
 import { useRouter } from "next/navigation"
+import styles from './SearchBox.module.scss'
 
 export function SearchBox() {
   const [query, setQuery] = useState("")

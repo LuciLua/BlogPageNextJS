@@ -4,15 +4,16 @@ import { useEffect, useState } from "react"
 import { useParams } from "next/navigation"
 import styles from "./Post.module.scss"
 import { BsPersonSquare } from "react-icons/bs";
+import { getUrlAPI } from "../../utils/getUrlAPI";
+import { revalidate } from "../../utils/setRevalidade";
+
 
 export function Post() {
   const [posts, setPosts] = useState<any[]>([])
   const params = useParams()
   const { slug } = params
 
-
-  const api_url = process.env.NEXT_PUBLIC_API_URL
-
+  const api_url = getUrlAPI()
 
   useEffect(() => {
     if (!api_url) {
@@ -20,7 +21,7 @@ export function Post() {
       return
     }
 
-    fetch(`${api_url}/api/posts`)
+    fetch(`${api_url}/api/posts`, { next: { revalidate: revalidate } })
       .then(res => res.json())
       .then(data => setPosts(data))
       .catch(err => console.error("Erro ao carregar posts:", err))

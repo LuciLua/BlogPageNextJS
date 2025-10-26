@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react"
 import styles from "./CardPost.module.scss"
+import { getUrlAPI } from "../../utils/getUrlAPI"
+import { revalidate } from "../../utils/setRevalidade"
 
 export function CardPost() {
   const [posts, setPosts] = useState<any[]>([])
-
-  const api_url = process.env.NEXT_PUBLIC_API_URL
+  const api_url = getUrlAPI()
 
   useEffect(() => {
     if (!api_url) {
@@ -14,7 +15,7 @@ export function CardPost() {
       return
     }
 
-    fetch(`${api_url}/api/posts`)
+    fetch(`${api_url}/api/posts`, { next: { revalidate: revalidate } })
       .then(res => res.json())
       .then(data => setPosts(data))
       .catch(err => console.error("Erro ao carregar posts:", err))

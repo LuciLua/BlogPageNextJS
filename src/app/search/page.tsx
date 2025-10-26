@@ -3,12 +3,15 @@
 import { useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
 import styles from "./SearchPage.module.scss"
+import { getUrlAPI } from "../../utils/getUrlAPI"
+import { revalidate } from "../../utils/setRevalidade"
 
 export default function SearchPage() {
   const searchParams = useSearchParams()
   const query = searchParams.get("q") || ""
   const [results, setResults] = useState<any[]>([])
-  const api_url = process.env.NEXT_PUBLIC_API_URL
+
+  const api_url = getUrlAPI()
 
   useEffect(() => {
 
@@ -19,7 +22,7 @@ export default function SearchPage() {
 
 
     if (query) {
-      fetch(`${api_url}/api/posts`)
+      fetch(`${api_url}/api/posts`, { next: { revalidate: revalidate } })
         .then(res => res.json())
         .then(data => {
           const filtered = data.filter((post: any) =>
