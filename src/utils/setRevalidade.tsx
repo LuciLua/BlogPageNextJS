@@ -1,1 +1,1 @@
-export const revalidate = 10
+export const revalidate = 14400
