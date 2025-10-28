@@ -3,6 +3,7 @@
 import { usePostBySlug } from "../../hooks/usePostBySlug";
 
 export function HeadComponentPagePosts({ slug }: { slug: string }) {
+  
   const { post } = usePostBySlug(slug);
 
   const isLoaded = !!post;
