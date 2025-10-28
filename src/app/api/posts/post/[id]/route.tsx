@@ -6,7 +6,7 @@ export async function GET(
     context: { params: { id: string } }
 ) {
 
-    const { id } = await context.params;
+    const { id } = context.params;
     
     var api_url: string;
     if (process.env.NODE_ENV != 'production') { api_url = 'http://localhost:3003' } else { api_url = process.env.API_URL }
