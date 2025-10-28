@@ -23,3 +23,7 @@ a {
     width: 100%;
     margin: auto;
 }
+
+.min-height{
+  min-height: calc(100vh - 45px);
+}

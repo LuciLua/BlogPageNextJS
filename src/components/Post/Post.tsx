@@ -36,7 +36,7 @@ export function Post() {
           🔄 Atualizado em <strong>{updatedDate}</strong>
         </p>
 
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        <div dangerouslySetInnerHTML={{ __html: post.content }} className={styles.contentBlog}/>
       </div>
     </article>
   )

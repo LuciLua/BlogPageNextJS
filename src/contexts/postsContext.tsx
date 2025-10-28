@@ -1,11 +1,11 @@
 'use client'
 
 import { createContext, useEffect, useState, ReactNode } from 'react'
+import { BlogPost } from '../types/Post'
 
-type Post = any // depois defina seu tipo real
 
 interface PostsContextType {
-  posts: Post[]
+  posts: BlogPost[]
   refreshPosts: () => Promise<void>
 }
 
@@ -13,7 +13,7 @@ export const PostsContext = createContext<PostsContextType | undefined>(undefine
 
 export function PostsProvider({ children }: { children: ReactNode }) {
 
-  const [posts, setPosts] = useState<Post[]>([])
+  const [posts, setPosts] = useState<BlogPost[]>([])
 
   async function refreshPosts() {
     try {

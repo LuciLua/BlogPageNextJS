@@ -2,6 +2,7 @@ import Link from "next/link"
 import styles from "./noticia.module.scss"
 
 export default function Root({ children }) {
+
     return (
         <div className={styles.noticia}>
             <div className={styles.container}>

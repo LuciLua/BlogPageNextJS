@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { usePosts } from './usePosts'
-
-type Post = any
+import { BlogPost } from '../types/Post'
 
 export function usePostBySlug(slug: string) {
 
@@ -11,7 +10,7 @@ export function usePostBySlug(slug: string) {
     const { posts } = usePosts()
 
     // cria espaco na memoria para o post individual
-    const [post, setPost] = useState<Post | null>(null)
+    const [post, setPost] = useState<BlogPost | null>(null)
 
     // loading appear, true: loading...
     const [loading, setLoading] = useState(true)

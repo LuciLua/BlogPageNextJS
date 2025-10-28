@@ -15,14 +15,17 @@ export default function root({ children: children }) {
             <head>
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <title>Blog - LuciLua</title>
+                <meta />
+                <title>The Luci Lens</title>
             </head>
-            <body className={montserrat.className}>
+            <body className={`${montserrat.className}`}>
                 <Menu />
                 <PostsProvider>
-                    {children}
+                    <div className='min-height'>
+                        {children}
+                    </div>
                 </PostsProvider>
-                <Footer/>
+                <Footer />
             </body>
         </html>
     )
