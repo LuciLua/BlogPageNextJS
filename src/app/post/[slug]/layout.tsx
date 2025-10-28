@@ -12,7 +12,7 @@ export default function Root({ children }) {
                     ← Voltar
                 </Link>
                 {/* Conteúdo do post */}
-                    {children}
+                {children}
             </div>
         </div>
     )

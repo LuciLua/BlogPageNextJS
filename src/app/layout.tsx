@@ -1,6 +1,7 @@
 import '../styles/globals.scss'
 import { Menu } from '../components/Menu/Menu'
 import { Montserrat } from "next/font/google"
+import { PostsProvider } from '../contexts/postsContext'
 
 
 const montserrat = Montserrat({ subsets: ['latin-ext'], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] })
@@ -17,7 +18,9 @@ export default function root({ children: children }) {
             </head>
             <body className={montserrat.className}>
                 <Menu />
-                {children}
+                <PostsProvider>
+                    {children}
+                </PostsProvider>
             </body>
         </html>
     )

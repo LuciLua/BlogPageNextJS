@@ -1,18 +1,11 @@
 'use client'
 
-import { useEffect, useState } from "react"
+import { usePosts } from "../../hooks/usePosts"
 import styles from "./CardPost.module.scss"
 
 export function CardPost() {
-  const [posts, setPosts] = useState<any[]>([])
 
-  useEffect(() => {
-
-    fetch(`/api/posts`)
-      .then(res => res.json())
-      .then(data => setPosts(data))
-      .catch(err => console.error("Erro ao carregar posts:", err))
-  }, [])
+  const { posts } = usePosts()
 
   return (
     <div className={styles.grid}>

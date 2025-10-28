@@ -3,25 +3,19 @@
 import { useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
 import styles from "./SearchPage.module.scss"
+import { usePosts } from "../../hooks/usePosts"
 
 export default function SearchPage() {
   const searchParams = useSearchParams()
   const query = searchParams.get("q") || ""
   const [results, setResults] = useState<any[]>([])
 
-  useEffect(() => {
+  const { posts } = usePosts()
 
+  useEffect(() => {
     if (query) {
-      fetch(`/api/posts`)
-        .then(res => res.json())
-        .then(data => {
-          const filtered = data.filter((post: any) =>
-            post.title.toLowerCase().includes(query.toLowerCase()) ||
-            post.excerpt.toLowerCase().includes(query.toLowerCase())
-          )
-          setResults(filtered)
-        })
-        .catch(err => console.error("Erro na busca:", err))
+      const filtered = posts.filter((post: any) => post.title.toLowerCase().includes(query.toLowerCase()) || post.excerpt.toLowerCase().includes(query.toLowerCase()))
+      setResults(filtered)
     }
   }, [query])
 
