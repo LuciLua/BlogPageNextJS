@@ -3,26 +3,16 @@
 import { useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
 import styles from "./SearchPage.module.scss"
-import { getUrlAPI } from "../../utils/getUrlAPI"
-import { revalidate } from "../../utils/setRevalidade"
 
 export default function SearchPage() {
   const searchParams = useSearchParams()
   const query = searchParams.get("q") || ""
   const [results, setResults] = useState<any[]>([])
 
-  const api_url = getUrlAPI()
-
   useEffect(() => {
 
-    if (!api_url) {
-      console.error("API_URL não definida")
-      return
-    }
-
-
     if (query) {
-      fetch(`${api_url}/api/posts`, { next: { revalidate: revalidate } })
+      fetch(`/api/posts`)
         .then(res => res.json())
         .then(data => {
           const filtered = data.filter((post: any) =>
@@ -33,7 +23,7 @@ export default function SearchPage() {
         })
         .catch(err => console.error("Erro na busca:", err))
     }
-  }, [query, api_url])
+  }, [query])
 
   return (
     <div className={styles.container}>
@@ -44,7 +34,7 @@ export default function SearchPage() {
       {results.length > 0 ? (
         <div className={styles.results}>
           {results.map((post, i) => (
-            <a key={i} href={`${api_url}/post/${post.slug}`} className={styles.result}>
+            <a key={i} href={`/post/${post.slug}`} className={styles.result}>
               <div className={styles.text}>
                 <h2>{post.title}</h2>
                 <p>{post.excerpt}</p>

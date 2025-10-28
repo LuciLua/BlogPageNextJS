@@ -2,24 +2,17 @@
 
 import { useEffect, useState } from "react"
 import styles from "./CardPost.module.scss"
-import { getUrlAPI } from "../../utils/getUrlAPI"
-import { revalidate } from "../../utils/setRevalidade"
 
 export function CardPost() {
   const [posts, setPosts] = useState<any[]>([])
-  const api_url = getUrlAPI()
 
   useEffect(() => {
-    if (!api_url) {
-      console.error("API_URL não definida")
-      return
-    }
 
-    fetch(`${api_url}/api/posts`, { next: { revalidate: revalidate } })
+    fetch(`/api/posts`)
       .then(res => res.json())
       .then(data => setPosts(data))
       .catch(err => console.error("Erro ao carregar posts:", err))
-  }, [api_url])
+  }, [])
 
   return (
     <div className={styles.grid}>
