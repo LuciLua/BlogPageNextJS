@@ -2,6 +2,7 @@ import '../styles/globals.scss'
 import { Menu } from '../components/Menu/Menu'
 import { Montserrat } from "next/font/google"
 import { PostsProvider } from '../contexts/postsContext'
+import { Footer } from '../components/Footer/Footer'
 
 
 const montserrat = Montserrat({ subsets: ['latin-ext'], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] })
@@ -21,6 +22,7 @@ export default function root({ children: children }) {
                 <PostsProvider>
                     {children}
                 </PostsProvider>
+                <Footer/>
             </body>
         </html>
     )

@@ -1,0 +1,38 @@
+.footer {
+    width: 100%;
+    background: #131416;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 10;
+
+    .content {
+        width: 100%;
+        max-width: 1300px;
+
+
+        padding: 15px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        p {
+
+            font-size: 14px;
+
+            a {
+                text-decoration: none;
+                color: #ffffff;
+                font-weight: 500;
+                transition: color 0.2s ease;
+                font-size: 14px;
+
+                &:hover {
+                    color: #a0a0a0;
+                }
+            }
+        }
+    }
+}
