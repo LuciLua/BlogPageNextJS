@@ -1,54 +1,47 @@
-// import Head from "next/head";
-// import { HeadComponentPagePosts } from "../../../components/HeadComponentPagePosts/HeadComponentPagePosts";
+import Head from "next/head";
+import { HeadComponentPagePosts } from "../../../components/HeadComponentPagePosts/HeadComponentPagePosts";
 import { Post } from "../../../components/Post/Post";
-// import { usePostBySlug } from "../../../hooks/usePostBySlug";
-import { Metadata } from "next";
-import { getPostBySlug } from "../../../lib/posts";
 
-
-export async function generateMetadata({ params }) {
-  const paramss = await params
-  const post = await getPostBySlug(paramss.slug);
-
-  if (!post) {
-    return {
-      title: "The Luci Lens",
-      description: "Escritos e reflexões a cerca de assuntos diversos",
-      alternates: { canonical: "https://blog.lucilua.com.br" },
-    };
-  }
-
-  return {
-    title: `${post.title} | Luci Lua Blog`,
-    description: post.excerpt,
-    authors: [{ name: post.author }],
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      url: `https://blog.lucilua.com.br/post/${params.slug}`,
-      images: [post.capa],
-      siteName: "Luci Lua Blog",
-      type: "article",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
-      images: [post.capa],
-      site: "@SeuTwitter",
-      creator: "@SeuTwitter",
-    },
-    alternates: {
-      canonical: `https://blog.lucilua.com.br/post/${params.slug}`,
-    },
-  };
+// page.tsx
+interface PageProps {
+  params: Promise<{ slug: string }>;
+  // title: string;
+  // description?: string;
 }
 
-export default async function page_noticia({ params }) {
-  // const { slug } = await params; // 👈 await no params
+
+export default async function page_noticia({ params }: PageProps) {
+
+  const { slug } = await params; // 👈 await no params
+  // const { author, canonicalUrl, capa, title, excerpt } = HeadComponentPagePosts({ slug })
+
   return (
     <>
+      <HeadComponentPagePosts slug={slug} />
       <Post />
+      {/* <Head>
+        <title>{title} | Luci Lua Blog</title>
+        <meta name="description" content={excerpt} />
+        <link rel="canonical" href={canonicalUrl} />
+
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={excerpt} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={capa} />
+        <meta property="og:site_name" content="Luci Lua Blog" />
+        <meta property="article:author" content={author} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={excerpt} />
+        <meta name="twitter:image" content={capa} />
+        <meta name="twitter:site" content="@SeuTwitter" />
+        <meta name="twitter:creator" content="@SeuTwitter" />
+
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content={author} />
+      </Head> */}
     </>
   );
 }
