@@ -11,7 +11,7 @@ export function HeadComponentPagePosts({ slug }: { slug: string }) {
   const title = isLoaded ? `${post.title} | Luci Lua Blog` : "The Luci Lens";
   const description = isLoaded
     ? post.excerpt
-    : "Escritos e reflexões a cerca de assuntos diversos";
+    : "Escritos e reflexões acerca de assuntos diversos";
   const author = isLoaded ? post.author : "Luci Lua";
   const image = isLoaded ? post.capa : "https://blog.lucilua.com.br/images/5.jpg";
   const canonical = isLoaded
@@ -38,8 +38,8 @@ export function HeadComponentPagePosts({ slug }: { slug: string }) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:site" content="@SeuTwitter" />
-      <meta name="twitter:creator" content="@SeuTwitter" />
+      <meta name="twitter:site" content="@L4Dev" />
+      <meta name="twitter:creator" content="@L4Dev" />
 
       {/* Extras */}
       <meta name="robots" content="index, follow" />

@@ -15,7 +15,7 @@ export default function root({ children: children }) {
             <head>
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <meta />
+                <meta name="description" content="Escritos e reflexões acerca de assuntos diversos" />
                 <title>The Luci Lens</title>
             </head>
             <body className={`${montserrat.className}`}>
